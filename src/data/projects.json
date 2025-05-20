@@ -1,0 +1,31 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "AI-Powered Data Analytics Platform",
+      "description": "Built a scalable data analytics platform using Databricks and AWS, implementing machine learning models for predictive analytics.",
+      "technologies": ["Python", "Databricks", "AWS", "Machine Learning"],
+      "githubUrl": "https://github.com/yourusername/ai-analytics",
+      "liveUrl": "https://ai-analytics.example.com",
+      "image": "/projects/ai-analytics.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Historical Data Visualization",
+      "description": "Created an interactive web application for visualizing historical data using React and D3.js.",
+      "technologies": ["React", "TypeScript", "D3.js", "Tailwind CSS"],
+      "githubUrl": "https://github.com/yourusername/historical-viz",
+      "liveUrl": "https://historical-viz.example.com",
+      "image": "/projects/historical-viz.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Play-It-Forward Website",
+      "description": "Developed a modern website for the non-profit organization Play-It-Forward, featuring event management and donation system.",
+      "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+      "githubUrl": "https://github.com/yourusername/play-it-forward",
+      "liveUrl": "https://playitforward.org",
+      "image": "/projects/play-it-forward.jpg"
+    }
+  ]
+} 
