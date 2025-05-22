@@ -3,10 +3,11 @@ import { useState } from 'react'
 function App() {
   const [num1, setNum1] = useState<string>('')
   const [num2, setNum2] = useState<string>('')
+  const [num3, setNum3] = useState<string>('')
   const [result, setResult] = useState<number | null>(null)
 
   const handleAdd = () => {
-    const sum = Number(num1) + Number(num2)
+    const sum = Number(num1) + Number(num2) + Number(num3)
     setResult(sum)
   }
 
@@ -15,7 +16,8 @@ function App() {
     setResult(null)
   }
 
-  const isValid = num1 !== '' && num2 !== '' && !isNaN(Number(num1)) && !isNaN(Number(num2))
+  const isValid = num1 !== '' && num2 !== '' && num3 !== '' && 
+    !isNaN(Number(num1)) && !isNaN(Number(num2)) && !isNaN(Number(num3))
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -23,7 +25,7 @@ function App() {
         {/* Header Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-indigo-600 mb-2">Aidan Kamdar</h1>
-          <p className="text-gray-600 text-lg">Simple Calculator App</p>
+          <p className="text-gray-600 text-lg">Three Number Calculator</p>
         </div>
 
         {/* Calculator Card */}
@@ -57,6 +59,21 @@ function App() {
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
                   placeholder="Enter second number"
                   aria-label="Second number"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="num3" className="block text-sm font-medium text-gray-700">
+                  Third Number
+                </label>
+                <input
+                  id="num3"
+                  type="number"
+                  value={num3}
+                  onChange={(e) => handleInputChange(e.target.value, setNum3)}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition duration-200"
+                  placeholder="Enter third number"
+                  aria-label="Third number"
                 />
               </div>
 
